@@ -45,7 +45,8 @@ const StickySidebar = (props) => {
 
   return (
     <>
-      <div className="right-side-views">
+      {/* remember to uncomment this code  */}
+      {/* <div className="right-side-views">
         <ul
           className={`sticky-sidebar siderbar-view  ${
             task || setting ? "show-sidebar" : ""
@@ -105,9 +106,9 @@ const StickySidebar = (props) => {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
 
-      <div className={`sidebar-layout show-layout offcanvas offcanvas-end ${ task ? "show" : ""}`} id="demo">
+      <div className={`sidebar-layout show-layout offcanvas offcanvas-end ${task ? "show" : ""}`} id="demo">
         <div className="sidebar-content">
           <div className="sidebar-top">
             <div className="container-fluid">
@@ -255,9 +256,8 @@ const StickySidebar = (props) => {
         </div>
       </div>
       <div
-        className={`sidebar-settings show-layout siderbar-view sidebar-layout offcanvas offcanvas-end ${
-          setting ? "show" : ""
-        }`}
+        className={`sidebar-settings show-layout siderbar-view sidebar-layout offcanvas offcanvas-end ${setting ? "show" : ""
+          }`}
         id="settings"
       >
         <div className="sidebar-content sticky-sidebar-one">
@@ -452,7 +452,7 @@ const StickySidebar = (props) => {
 
                   <div className="col-auto setting">
                     <label className="switch switch-one sidebar-type-four">
-                      <input type="checkbox"/>
+                      <input type="checkbox" />
                       <span className="slider slider-one round" />
                     </label>
                   </div>

@@ -179,7 +179,8 @@ const ExpenseManagement = () => {
                   <ul className="filter-list">
                     <li>
                       <Link className="btn btn-filters w-auto popup-toggle"
-                        onClick={() => setShow(!show)}
+                        onClick={() => {setShow(!show)}}
+                        to="#"
                       >
                         <span className="me-2">
                           {/* <i className="fe fe-filter" /> */}
