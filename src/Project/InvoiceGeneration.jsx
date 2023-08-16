@@ -247,10 +247,10 @@ const InvoiceGeneration = () => {
                                   <td>Lorem ipsum dolor sit amet</td>
                                   <td>0</td>
                                   <td>Pcs</td>
-                                  <td>$120.00</td>
+                                  <td>₹120.00</td>
                                   <td>0</td>
                                   <td>0</td>
-                                  <td>$120.00</td>
+                                  <td>₹120.00</td>
                                   <td className="d-flex align-items-center">
                                     <Link
                                       to="#"
@@ -357,13 +357,13 @@ const InvoiceGeneration = () => {
                             <div className="invoice-total-box">
                               <div className="invoice-total-inner">
                                 <p>
-                                  Taxable Amount <span>$120.00</span>
+                                  Taxable Amount <span>₹120.00</span>
                                 </p>
                                 <p>
-                                  Discount <span>$13.20</span>
+                                  Discount <span>₹13.20</span>
                                 </p>
                                 <p>
-                                  Vat <span>$0.00</span>
+                                  Vat <span>₹0.00</span>
                                 </p>
                                 <div className="status-toggle justify-content-between">
                                   <div className="d-flex align-center">
@@ -381,12 +381,12 @@ const InvoiceGeneration = () => {
                                       checkbox
                                     </label>
                                   </div>
-                                  <span>$0.00</span>
+                                  <span>₹0.00</span>
                                 </div>
                               </div>
                               <div className="invoice-total-footer">
                                 <h4>
-                                  Total Amount <span>$107.80</span>
+                                  Total Amount <span>₹107.80</span>
                                 </h4>
                               </div>
                             </div>

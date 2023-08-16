@@ -58,7 +58,7 @@ const InvoiceHead = ({show,setShow}) => {
                 <div className="dash-count">
                   <div className="dash-title">Total Invoice</div>
                   <div className="dash-counts">
-                    <p>$298</p>
+                    <p>₹29800</p>
                   </div>
                 </div>
               </div>
@@ -87,7 +87,7 @@ const InvoiceHead = ({show,setShow}) => {
                 <div className="dash-count">
                   <div className="dash-title">Total Outstanding</div>
                   <div className="dash-counts">
-                    <p>$325,215</p>
+                    <p>₹325,215</p>
                   </div>
                 </div>
               </div>
@@ -116,7 +116,7 @@ const InvoiceHead = ({show,setShow}) => {
                 <div className="dash-count">
                   <div className="dash-title">Total Overdue</div>
                   <div className="dash-counts">
-                    <p>$7825</p>
+                    <p>₹7825</p>
                   </div>
                 </div>
               </div>
@@ -174,7 +174,7 @@ const InvoiceHead = ({show,setShow}) => {
                 <div className="dash-count">
                   <div className="dash-title">Draft</div>
                   <div className="dash-counts">
-                    <p>$125,586</p>
+                    <p>₹125,586</p>
                   </div>
                 </div>
               </div>
@@ -203,7 +203,7 @@ const InvoiceHead = ({show,setShow}) => {
                 <div className="dash-count">
                   <div className="dash-title">Recurring</div>
                   <div className="dash-counts">
-                    <p>$86,892</p>
+                    <p>₹86,892</p>
                   </div>
                 </div>
               </div>

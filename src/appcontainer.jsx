@@ -253,6 +253,7 @@ import ExpenseManagement from "./Project/ExpenseManagement";
 import BuyerCreation from "./Project/BuyerCreation";
 import InvoiceManagement from "./Project/InvoiceManagement";
 import InvoiceGeneration from "./Project/InvoiceGeneration";
+import CustomLogin from "./Project/CustomLogin";
 
 const AppContainer = (props) => {
 
@@ -478,6 +479,7 @@ const AppContainer = (props) => {
 
 
 
+        <Route path="/login2" component={CustomLogin} />
         <Route path="/stock_management" component={StockManagement} />
         <Route path="/daily_balance" component={DailyBalance} />
         <Route path="/expense_management" component={ExpenseManagement} />
