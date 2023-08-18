@@ -4,11 +4,11 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import config from 'config';
 
 const AppRouter = (props) => {
-    return(
+    return (
         <Router basename={`${config.publicPath}`}>
-             <Route render={(props)=> <AppContainer {...props}/>} />
+            <Route render={(props) => <AppContainer {...props} />} />
         </Router>
-    );    
+    );
 }
 
 

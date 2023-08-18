@@ -51,7 +51,7 @@ const Login = (props) => {
             })
         } else {
             clearErrors('password')
-            props.history.push('buyer_creation')
+            props.history.push('daily_balance')
 
         }
     }

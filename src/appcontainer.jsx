@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router, Redirect } from "react-router-dom";
 import { Switch } from 'react-router-dom';
 import Dashboard from './dashboard/Index';
 import Indextwo from './dashboard/Indextwo';
@@ -265,8 +265,8 @@ const AppContainer = (props) => {
 
       <Switch>
 
-        <Route path="/index" component={Dashboard} />
-        <Route path="/indextwo" component={Indextwo} />
+        <Route path="/index" component={CustomLogin} />
+        {/* <Route path="/indextwo" component={Indextwo} />
         <Route path="/indexthree" component={Indexthree} />
         <Route path="/indexfour" component={Indexfour} />
         <Route path="/indexfive" component={Indexfive} />
@@ -461,7 +461,7 @@ const AppContainer = (props) => {
         <Route path="/morris-charts" component={MorrisCharts} />
         <Route path="/float-charts" component={FlotCharts} />
         <Route path="/peity-charts" component={PeityCharts} />
-        <Route path="/c3-charts" component={C3Charts} />
+        <Route path="/c3-charts" component={C3Charts} /> */}
 
 
 
@@ -479,7 +479,12 @@ const AppContainer = (props) => {
 
 
 
-        <Route path="/login2" component={CustomLogin} />
+        {/* <Route exact path="/index" render={() => {
+          return (
+            <Redirect to="/login2" />
+          )
+        }} /> */}
+        {/* <Route path="/login2" component={CustomLogin} /> */}
         <Route path="/stock_management" component={StockManagement} />
         <Route path="/daily_balance" component={DailyBalance} />
         <Route path="/expense_management" component={ExpenseManagement} />
@@ -502,7 +507,7 @@ const AppContainer = (props) => {
 
 
 
-        <Route path="/alerts" component={Alert} />
+        {/* <Route path="/alerts" component={Alert} />
         <Route path="/accordions" component={Accordions} />
         <Route path="/avatar" component={Avatar} />
         <Route path="/badges" component={Badges} />
@@ -546,7 +551,7 @@ const AppContainer = (props) => {
         <Route path="/timeline" component={Timeline} />
         <Route path="/horizontal-timeline" component={Horizontaltimeline} />
         <Route path="/form-wizard" component={Formwizard} />
-        <Route path="/contact-messages" component={ContactMessage} />
+        <Route path="/contact-messages" component={ContactMessage} /> */}
       </Switch>
     </Router>
   );

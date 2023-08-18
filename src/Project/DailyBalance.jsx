@@ -4,6 +4,7 @@ import recentinvoices from '../json/recentinvoices';
 import recentestimates from '../json/recentestimates';
 import ApexCharts from 'apexcharts';
 // import Header from '../layouts/Header'
+import Header from './CustomHeader'
 import Sidebar from './SidebarCustom'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -123,8 +124,8 @@ const Dashboard = () => {
 
 			<div className={`main-wrapper ${menu ? 'slide-nav' : ''}`} >
 
-				{/* <Header
-					onMenuClick={(value) => toggleMobileMenu()} /> */}
+				<Header
+					onMenuClick={(value) => toggleMobileMenu()} />
 				<Sidebar />
 
 				<div className="page-wrapper">

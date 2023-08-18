@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
-// import Header from "../layouts/Header";
+import Header from "./CustomHeader";
 import Sidebar from "./SidebarCustom";
 import { Logo, signature, circle1, circle2 } from "../_components/imagepath";
 import FeatherIcon from "feather-icons-react";
@@ -62,7 +62,7 @@ const InvoiceGeneration = () => {
   return (
     <>
       <div className={`main-wrapper ${menu ? "slide-nav" : ""}`}>
-        {/* <Header onMenuClick={(value) => toggleMobileMenu()} /> */}
+        <Header onMenuClick={(value) => toggleMobileMenu()} />
         <Sidebar />
         {/* <!-- Page Wrapper --> */}
         <div className="page-wrapper">

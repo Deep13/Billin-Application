@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Select2 from "react-select2-wrapper";
 // import Header from "../layouts/Header";
+import Header from './CustomHeader'
 import Sidebar from "./SidebarCustom";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
@@ -25,7 +26,7 @@ const BuyerCreation = () => {
   return (
     <>
       <div className={`main-wrapper ${menu ? "slide-nav" : ""}`}>
-        {/* <Header onMenuClick={(value) => toggleMobileMenu()} /> */}
+        <Header onMenuClick={(value) => toggleMobileMenu()} />
         <Sidebar />
         <div className="page-wrapper">
           <div className="content container-fluid">

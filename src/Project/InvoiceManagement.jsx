@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import Header from "../layouts/Header";
+import Header from "./CustomHeader";
 import Sidebar from "./SidebarCustom";
 import FeatherIcon from "feather-icons-react";
 import Data from "../assets/jsons/invoiceList";
@@ -155,7 +155,7 @@ const InvoiceManagement = () => {
   return (
     <>
       <div className={`main-wrapper ${menu ? "slide-nav" : ""}`}>
-        {/* <Header onMenuClick={(value) => toggleMobileMenu()} /> */}
+        <Header onMenuClick={(value) => toggleMobileMenu()} />
         <Sidebar />
 
         <div className="page-wrapper">

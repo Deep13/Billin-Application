@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Header from "../layouts/Header";
+import Header from "./CustomHeader";
 import Sidebar from "./SidebarCustom";
 import FeatherIcon from "feather-icons-react";
-import Data from "../assets/jsons/inventory";
+import Data from "./inventory";
 import "../_components/antd.css";
 import { Table } from "antd";
 import {
@@ -23,11 +23,11 @@ const StockManagement = () => {
     };
 
     const [units, setUnits] = useState([
-        { id: 1, text: "Pieces" },
-        { id: 2, text: "Inches" },
-        { id: 3, text: "Kilograms" },
-        { id: 4, text: "Inches" },
-        { id: 5, text: "Box" },
+        { id: 1, text: "22-08-2023" },
+        { id: 2, text: "15-09-2023" },
+        { id: 3, text: "16-07-2023" },
+        { id: 4, text: "21-08-2023" },
+        { id: 5, text: "2-11-2023" },
     ]);
 
     const datasource = Data?.Data;
@@ -50,8 +50,8 @@ const StockManagement = () => {
             sorter: (a, b) => a.Code.length - b.Code.length,
         },
         {
-            title: "Units",
-            dataIndex: "Units",
+            title: "Entry Date",
+            dataIndex: "EntryDate",
             sorter: (a, b) => a.Units.length - b.Units.length,
         },
         {
@@ -60,13 +60,18 @@ const StockManagement = () => {
             sorter: (a, b) => a.Quantity.length - b.Quantity.length,
         },
         {
-            title: "Sales Price",
-            dataIndex: "Sales",
-            sorter: (a, b) => a.Sales.length - b.Sales.length,
+            title: "Stone Wt",
+            dataIndex: "StoneWt",
+            sorter: (a, b) => a.StoneWt.length - b.StoneWt.length,
+        },
+        {
+            title: "Purity",
+            dataIndex: "Purity",
+            sorter: (a, b) => a.Purity.length - b.Purity.length,
         },
         {
             title: "Purchase Price",
-            dataIndex: "Purchase",
+            dataIndex: "PurchasePrice",
             sorter: (a, b) => a.Purchase.length - b.Purchase.length,
         },
         {
@@ -74,7 +79,7 @@ const StockManagement = () => {
             dataIndex: "Action",
             render: (text, record) => (
                 <div className="d-flex align-items-center">
-                    <Link
+                    {/* <Link
                         to="#"
                         className="btn btn-greys bg-success-light me-2"
                         data-bs-toggle="modal"
@@ -89,7 +94,7 @@ const StockManagement = () => {
                         data-bs-target="#stock_out"
                     >
                         <i className="fa fa-plus-circle me-1" /> Stock out
-                    </Link>
+                    </Link> */}
                     <div className="dropdown dropdown-action">
                         <Link
                             to="#"
@@ -135,7 +140,7 @@ const StockManagement = () => {
     return (
         <>
             <div className={`main-wrapper ${menu ? "slide-nav" : ""}`}>
-                {/* <Header onMenuClick={(value) => toggleMobileMenu()} /> */}
+                <Header onMenuClick={(value) => toggleMobileMenu()} />
                 <Sidebar />
 
                 <div className="page-wrapper">
@@ -159,25 +164,25 @@ const StockManagement = () => {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="btn-filters" to="#">
+                                            {/* <Link className="btn-filters" to="#">
                                                 <span>
-                                                    {/* <i className="fe fe-grid" /> */}
+                                                    <i className="fe fe-grid" />
                                                     <FeatherIcon icon="grid" />
                                                 </span>{" "}
-                                            </Link>
+                                            </Link> */}
                                         </li>
                                         <li>
-                                            <Link
+                                            {/* <Link
                                                 className="active btn-filters me-2"
                                                 to="#"
                                             >
                                                 <span>
-                                                    {/* <i className="fe fe-list" /> */}
+                                                    <i className="fe fe-list" />
                                                     <FeatherIcon icon="list" />
                                                 </span>{" "}
-                                            </Link>
+                                            </Link> */}
                                         </li>
-                                        <li className="">
+                                        <li className="me-2">
                                             <div className="dropdown dropdown-action">
                                                 <Link
                                                     to="#"
@@ -215,6 +220,16 @@ const StockManagement = () => {
                                                     </ul>
                                                 </div>
                                             </div>
+                                        </li>
+                                        <li>
+                                            <Link
+                                                to="#"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#edit_inventory"
+                                                className="btn btn-rounded btn-primary me-1">
+                                                <FeatherIcon icon="plus" />
+                                                {"  "} <span className="ms-1">Add Items</span>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -295,7 +310,7 @@ const StockManagement = () => {
                                     </div>
                                     <div className="col-lg-6 col-md-12">
                                         <div className="form-group mb-0">
-                                            <label>Units</label>
+                                            <label>Entry Date</label>
                                             <Select2
                                                 className="w-100"
                                                 data={units}
@@ -425,12 +440,14 @@ const StockManagement = () => {
                     </div>
                 </div>
 
+
+
                 <div className="modal custom-modal fade" id="edit_inventory" role="dialog">
                     <div className="modal-dialog modal-dialog-centered modal-md">
                         <div className="modal-content">
                             <div className="modal-header border-0 pb-0">
                                 <div className="form-header modal-header-title text-start mb-0">
-                                    <h4 className="mb-0">Edit Stock</h4>
+                                    <h4 className="mb-0">Add Items</h4>
                                 </div>
                                 <button
                                     type="button"
@@ -447,9 +464,9 @@ const StockManagement = () => {
                                 <div className="row">
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Name</label>
+                                            <label>Entry Date</label>
                                             <input
-                                                type="text"
+                                                type="date"
                                                 className="form-control"
                                                 defaultValue="Lorem ipsum dolor sit"
                                             />
@@ -457,7 +474,7 @@ const StockManagement = () => {
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Code</label>
+                                            <label>Om Code</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
@@ -467,7 +484,7 @@ const StockManagement = () => {
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Units</label>
+                                            <label>Gross Wt</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
@@ -477,41 +494,61 @@ const StockManagement = () => {
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Quantity</label>
+                                            <label>Stone Wt</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                defaultValue={3}
+                                                // defaultValue={3}
                                             />
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Sales Price</label>
+                                            <label>HUID</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                defaultValue="$155.00"
+                                                // defaultValue="$155.00"
                                             />
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group">
-                                            <label>Purchase Price</label>
+                                            <label>Net Wt</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                defaultValue="$150.00"
+                                                // defaultValue="$150.00"
                                             />
                                         </div>
                                     </div>
                                     <div className="col-lg-12 col-md-12">
                                         <div className="form-group mb-0">
-                                            <label>Status</label>
+                                            <label>Quantity</label>
                                             <input
                                                 type="text"
                                                 className="form-control"
-                                                defaultValue="Stock in"
+                                                // defaultValue="Stock in"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-12 col-md-12">
+                                        <div className="form-group mb-0">
+                                            <label>Purity</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                // defaultValue="Stock in"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div className="col-lg-12 col-md-12">
+                                        <div className="form-group mb-0">
+                                            <label>Ornament Desc</label>
+                                            <input
+                                                type="text"
+                                                className="form-control"
+                                                // defaultValue="Stock in"
                                             />
                                         </div>
                                     </div>
@@ -530,7 +567,7 @@ const StockManagement = () => {
                                     data-bs-dismiss="modal"
                                     className="btn btn-primary paid-continue-btn"
                                 >
-                                    Update
+                                    Add
                                 </Link>
                             </div>
                         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Select2 from "react-select2-wrapper";
-import Header from "../layouts/Header";
+import Header from "./CustomHeader";
 import Sidebar from "./SidebarCustom";
 import "../_components/antd.css";
 import { Pagination, Table } from "antd";
@@ -166,7 +166,7 @@ const ExpenseManagement = () => {
   return (
     <>
       <div className={`main-wrapper ${menu ? "slide-nav" : ""}`}>
-        {/* <Header onMenuClick={(value) => toggleMobileMenu()} /> */}
+        <Header onMenuClick={(value) => toggleMobileMenu()} />
         <Sidebar />
 
         <div className="page-wrapper">
@@ -198,20 +198,20 @@ const ExpenseManagement = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="btn-filters" to="#">
+                      {/* <Link className="btn-filters" to="#">
                         <span>
-                          {/* <i className="fe fe-grid" /> */}
+                           <i className="fe fe-grid" />
                           <FeatherIcon icon="grid" />
                         </span>{" "}
-                      </Link>
+                      </Link> */}
                     </li>
                     <li>
-                      <Link className="active btn-filters" to="#">
+                      {/* <Link className="active btn-filters" to="#">
                         <span>
-                          {/* <i className="fe fe-list" /> */}
+                          <i className="fe fe-list" />
                           <FeatherIcon icon="list" />
                         </span>{" "}
-                      </Link>
+                      </Link> */}
                     </li>
                     <li>
                       <Link
