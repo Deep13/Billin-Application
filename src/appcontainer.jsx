@@ -254,6 +254,7 @@ import BuyerCreation from "./Project/BuyerCreation";
 import InvoiceManagement from "./Project/InvoiceManagement";
 import InvoiceGeneration from "./Project/InvoiceGeneration";
 import CustomLogin from "./Project/CustomLogin";
+import DueManagement from "./Project/DueManagement";
 
 const AppContainer = (props) => {
 
@@ -266,7 +267,7 @@ const AppContainer = (props) => {
       <Switch>
 
         <Route path="/index" component={CustomLogin} />
-        {/* <Route path="/indextwo" component={Indextwo} />
+        <Route path="/indextwo" component={Indextwo} />
         <Route path="/indexthree" component={Indexthree} />
         <Route path="/indexfour" component={Indexfour} />
         <Route path="/indexfive" component={Indexfive} />
@@ -461,7 +462,7 @@ const AppContainer = (props) => {
         <Route path="/morris-charts" component={MorrisCharts} />
         <Route path="/float-charts" component={FlotCharts} />
         <Route path="/peity-charts" component={PeityCharts} />
-        <Route path="/c3-charts" component={C3Charts} /> */}
+        <Route path="/c3-charts" component={C3Charts} />
 
 
 
@@ -491,6 +492,7 @@ const AppContainer = (props) => {
         <Route path="/buyer_creation" component={BuyerCreation} />
         <Route path="/invoice_management" component={InvoiceManagement} />
         <Route path="/invoice_generation" component={InvoiceGeneration} />
+        <Route path="/due_management" component={DueManagement} />
 
 
 

@@ -69,7 +69,7 @@ const InvoiceGeneration = () => {
           <div className="content container-fluid">
             <div className="page-header">
               <div className="content-page-header">
-                <h5>Buyer Module</h5>
+                <h5>Due Management</h5>
               </div>
             </div>
             <div className="row">
@@ -80,7 +80,7 @@ const InvoiceGeneration = () => {
                       <div className="row align-item-center">
                         <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
-                            <label>Invoice Number</label>
+                            <label>Memo Number</label>
                             <input
                               type="text"
                               className="form-control"
@@ -115,7 +115,7 @@ const InvoiceGeneration = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
-                            <label>Invoice Date</label>
+                            <label>Memo Date</label>
                             <div className="cal-icon cal-icon-info">
                               <DatePicker
                                 className="datetimepicker form-control"
@@ -128,6 +128,36 @@ const InvoiceGeneration = () => {
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
+                            <label>Name</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter First Name"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Bill Due</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter First Name"
+                            />
+                          </div>
+                        </div>
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Due paid till date</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter First Name"
+                            />
+                          </div>
+                        </div>
+                        {/* <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
                             <label>Due Date</label>
                             <div className="cal-icon cal-icon-info">
                               <DatePicker
@@ -137,10 +167,10 @@ const InvoiceGeneration = () => {
                               ></DatePicker>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
-                            <label>Reference No</label>
+                            <label>Recipt No</label>
                             <input
                               type="text"
                               className="form-control"
@@ -149,6 +179,18 @@ const InvoiceGeneration = () => {
                           </div>
                         </div>
                         <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Entry Date</label>
+                            <div className="cal-icon cal-icon-info">
+                              <DatePicker
+                                className="datetimepicker form-control"
+                                selected={startDate}
+                                onChange={(date) => setStartDate(date)}
+                              ></DatePicker>
+                            </div>
+                          </div>
+                        </div>
+                        {/* <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group d-flex align-items-end h-100">
                             <label className="custom_check me-3">
                               <input type="checkbox" name="invoice" />
@@ -159,18 +201,18 @@ const InvoiceGeneration = () => {
                               <span className="checkmark" /> Recurring Invoice
                             </label>
                           </div>
-                        </div>
-                        <div className="col-lg-12">
+                        </div> */}
+                        {/* <div className="col-lg-12">
                           <div className="form-group">
                             <label>Products</label>
                             <ul className="form-group-plus css-equal-heights">
                               <li>
-                                {/* <select className="select">
+                                <select className="select">
                                   <option>Select Product</option>
                                   <option>Product 1</option>
                                   <option>Product 2</option>
                                   <option>Product 3</option>
-                                </select> */}
+                                </select>
                                 <Select2
                                   // className="w-100"
                                   data={productOption}
@@ -184,14 +226,14 @@ const InvoiceGeneration = () => {
                                   className="btn btn-primary form-plus-btn"
                                   to="/add-product"
                                 >
-                                  {/* <i className="fe fe-plus-circle" /> */}
+                                  <i className="fe fe-plus-circle" />
                                   <FeatherIcon icon="plus-circle" />
                                 </Link>
                               </li>
                             </ul>
                           </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        </div> */}
+                        {/* <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
                             <label>Currency</label>
                             <Select2
@@ -202,8 +244,8 @@ const InvoiceGeneration = () => {
                               }}
                             />
                           </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        </div> */}
+                        {/* <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
                             <label>Website</label>
                             <input
@@ -212,8 +254,8 @@ const InvoiceGeneration = () => {
                               placeholder="Enter Website Address"
                             />
                           </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        </div> */}
+                        {/* <div className="col-lg-4 col-md-6 col-sm-12">
                           <div className="form-group">
                             <label>Notes</label>
                             <input
@@ -222,10 +264,47 @@ const InvoiceGeneration = () => {
                               placeholder="Enter Your Notes"
                             />
                           </div>
+                        </div> */}
+                      </div>
+                      {/* Payment Methods */}
+                      <div className="row align-item-center">
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Cash</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter Website Address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row align-item-center">
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Cheque</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter Website Address"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="row align-item-center">
+                        <div className="col-lg-4 col-md-6 col-sm-12">
+                          <div className="form-group">
+                            <label>Card</label>
+                            <input
+                              type="text"
+                              className="form-control"
+                              placeholder="Enter Website Address"
+                            />
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div className="form-group-item">
+                    {/* <div className="form-group-item">
                       <div className="card-table">
                         <div className="card-body add-invoice">
                           <div className="table-responsive">
@@ -259,7 +338,7 @@ const InvoiceGeneration = () => {
                                       data-bs-target="#add_discount"
                                     >
                                       <span>
-                                        {/* <i className="fe fe-edit" /> */}
+                                        <i className="fe fe-edit" />
                                         <FeatherIcon icon="edit" />
                                       </span>
                                     </Link>
@@ -270,7 +349,7 @@ const InvoiceGeneration = () => {
                                       data-bs-target="#delete_discount"
                                     >
                                       <span>
-                                        {/* <i className="fe fe-trash-2" /> */}
+                                         <i className="fe fe-trash-2" /> 
                                         <FeatherIcon icon="trash-2" />
                                       </span>
                                     </Link>
@@ -281,7 +360,7 @@ const InvoiceGeneration = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="form-group-item border-0 p-0">
                       <div className="row">
                         <div className="col-xl-6 col-lg-12">

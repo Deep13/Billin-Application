@@ -78,11 +78,11 @@ const ExpenseManagement = () => {
       ),
       sorter: (a, b) => a.Attachment.length - b.Attachment.length,
     },
-    {
-      title: "Payment Mode",
-      dataIndex: "Payment",
-      sorter: (a, b) => a.Payment.length - b.Payment.length,
-    },
+    // {
+    //   title: "Payment Mode",
+    //   dataIndex: "Payment",
+    //   sorter: (a, b) => a.Payment.length - b.Payment.length,
+    // },
     {
       title: "Notes",
       dataIndex: "Notes",
@@ -179,7 +179,7 @@ const ExpenseManagement = () => {
                   <ul className="filter-list">
                     <li>
                       <Link className="btn btn-filters w-auto popup-toggle"
-                        onClick={() => {setShow(!show)}}
+                        onClick={() => { setShow(!show) }}
                         to="#"
                       >
                         <span className="me-2">
@@ -190,12 +190,12 @@ const ExpenseManagement = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="btn-filters" to="#">
+                      {/* <Link className="btn-filters" to="#">
                         <span>
-                          {/* <i className="fe fe-settings" /> */}
+                          <i className="fe fe-settings" />
                           <FeatherIcon icon="settings" />
                         </span>{" "}
-                      </Link>
+                      </Link> */}
                     </li>
                     <li>
                       {/* <Link className="btn-filters" to="#">
@@ -224,7 +224,7 @@ const ExpenseManagement = () => {
                           className="fa fa-plus-circle me-2"
                           aria-hidden="true"
                         />
-                        Add Expenses
+                        Add Expense
                       </Link>
                     </li>
                   </ul>
@@ -286,9 +286,9 @@ const ExpenseManagement = () => {
                 <div className="row">
                   <div className="col-lg-12 col-md-12">
                     <div className="form-group">
-                      <label>Expense ID</label>
+                      <label>Entry Date</label>
                       <input
-                        type="text"
+                        type="date"
                         className="form-control"
                         placeholder="Enter Expense ID"
                       />
@@ -296,11 +296,11 @@ const ExpenseManagement = () => {
                   </div>
                   <div className="col-lg-12 col-md-12">
                     <div className="form-group">
-                      <label>Reference</label>
+                      <label>Entry Id</label>
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Enter Reference"
+                        placeholder="Enter ID here"
                       />
                     </div>
                   </div>
@@ -314,9 +314,9 @@ const ExpenseManagement = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-lg-12 col-md-12">
+                  {/* <div className="col-lg-12 col-md-12">
                     <div className="form-group">
-                      <label>Payment Mode</label>
+                      <label>Particula</label>
                       <Select2
                         // className="w-100"
                         data={product}
@@ -325,8 +325,8 @@ const ExpenseManagement = () => {
                         }}
                       />
                     </div>
-                  </div>
-                  <div className="col-lg-12 col-md-12">
+                  </div> */}
+                  {/* <div className="col-lg-12 col-md-12">
                     <div className="form-group">
                       <label>Expense Date </label>
                       <input
@@ -335,8 +335,8 @@ const ExpenseManagement = () => {
                         placeholder="Select Expense Date"
                       />
                     </div>
-                  </div>
-                  <div className="col-lg-12 col-md-12">
+                  </div> */}
+                  {/* <div className="col-lg-12 col-md-12">
                     <div className="form-group">
                       <label>Payment Status</label>
                       <Select2
@@ -347,7 +347,7 @@ const ExpenseManagement = () => {
                         }}
                       />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="col-lg-12 col-md-12">
                     <div className="form-group">
                       <div className="form-upload-label">
@@ -388,7 +388,7 @@ const ExpenseManagement = () => {
                   data-bs-dismiss="modal"
                   className="btn btn-primary paid-continue-btn"
                 >
-                  Add Expenses
+                  Add Expense
                 </a>
               </div>
             </div>
@@ -396,6 +396,137 @@ const ExpenseManagement = () => {
         </div>
 
         <div className="modal custom-modal fade" id="edit_expenses" role="dialog">
+          <div className="modal-dialog modal-dialog-centered modal-md">
+            <div className="modal-content">
+              <div className="modal-header border-0 pb-0">
+                <div className="form-header modal-header-title text-start mb-0">
+                  <h4 className="mb-0">Add Expenses</h4>
+                </div>
+                <button
+                  type="button"
+                  className="close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span className="align-center" aria-hidden="true">
+                    ×
+                  </span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <div className="row">
+                  <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Entry Date</label>
+                      <input
+                        type="date"
+                        className="form-control"
+                        placeholder="Enter Expense ID"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Entry Id</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter ID here"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Amount </label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        placeholder="Enter Amount"
+                      />
+                    </div>
+                  </div>
+                  {/* <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Particula</label>
+                      <Select2
+                        // className="w-100"
+                        data={product}
+                        options={{
+                          placeholder: "Select Payment Mode",
+                        }}
+                      />
+                    </div>
+                  </div> */}
+                  {/* <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Expense Date </label>
+                      <input
+                        type="text"
+                        className="form-control datetimepicker"
+                        placeholder="Select Expense Date"
+                      />
+                    </div>
+                  </div> */}
+                  {/* <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <label>Payment Status</label>
+                      <Select2
+                        // className="w-100"
+                        data={payment}
+                        options={{
+                          placeholder: "Select Payment Status",
+                        }}
+                      />
+                    </div>
+                  </div> */}
+                  <div className="col-lg-12 col-md-12">
+                    <div className="form-group">
+                      <div className="form-upload-label">
+                        <label>Attachment </label>
+                      </div>
+                      <div className="form-upload-file">
+                        <span>
+                          <i className="fe fe-upload-cloud me-2" />
+                          Attach Files
+                        </span>
+                        <input type="file" multiple="" id="image_sign" />
+                        <div id="frames" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-12 col-md-12">
+                    <div className="form-group mb-0">
+                      <label>Notes</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Enter Notes"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer">
+                <a
+                  href="#"
+                  data-bs-dismiss="modal"
+                  className="btn btn-primary paid-cancel-btn me-2"
+                >
+                  Cancel
+                </a>
+                <a
+                  href="#"
+                  data-bs-dismiss="modal"
+                  className="btn btn-primary paid-continue-btn"
+                >
+                  Edit Expense
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="modal custom-modal fade" id="edit_expenses" role="dialog">
           <div className="modal-dialog modal-dialog-centered modal-md">
             <div className="modal-content">
               <div className="modal-header border-0 pb-0">
@@ -417,7 +548,7 @@ const ExpenseManagement = () => {
                 <div className="row">
                   <div className="col-lg-12 col-md-12">
                     <div className="form-group">
-                      <label>Expense ID</label>
+                      <label>Entry Id</label>
                       <input
                         type="text"
                         className="form-control"
@@ -523,7 +654,7 @@ const ExpenseManagement = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className="modal custom-modal fade" id="delete_modal" role="dialog">
           <div className="modal-dialog modal-dialog-centered modal-md">

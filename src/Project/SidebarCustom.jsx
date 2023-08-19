@@ -395,11 +395,11 @@ const Sidebar = (props) => {
                                     // }
                                     >
                                         {/* <FeatherIcon icon="grid" /> <span>Buyer Creation</span>{" "} */}
-                                        <FeatherIcon icon="clipboard" /> <span>Invoice Generation</span>{" "}
+                                        <FeatherIcon icon="clipboard" /> <span>Buyer Module</span>{" "}
                                     </Link>
                                     <Link
                                         to="/invoice_management"
-                                        className={`${"/invoice_management" === pathName ? "active" : ""
+                                        className={`${("/invoice_management" === pathName) || ("/invoice-paid" === pathName) || ("/invoice-list" === pathName) || ("/invoice-overdue" === pathName) || ("/invoice-draft" === pathName) || ("/invoice-recurring" === pathName) || ("/invoice-cancelled" === pathName) ? "active" : ""
                                             }`}
                                     // onClick={() =>
                                     //     toggleSidebar(
@@ -409,6 +409,19 @@ const Sidebar = (props) => {
                                     >
                                         {/* <FeatherIcon icon="grid" /> <span>Buyer Creation</span>{" "} */}
                                         <FeatherIcon icon="file" /> <span>Invoice Management</span>{" "}
+                                    </Link>
+                                    <Link
+                                        to="/due_management"
+                                        className={`${("/due_management" === pathName) || ("/invoice-paid" === pathName) || ("/invoice-list" === pathName) || ("/invoice-overdue" === pathName) || ("/invoice-draft" === pathName) || ("/invoice-recurring" === pathName) || ("/invoice-cancelled" === pathName) ? "active" : ""
+                                            }`}
+                                    // onClick={() =>
+                                    //     toggleSidebar(
+                                    //         isSideMenu == "application" ? "" : "application"
+                                    //     )
+                                    // }
+                                    >
+                                        {/* <FeatherIcon icon="grid" /> <span>Buyer Creation</span>{" "} */}
+                                        <FeatherIcon icon="users" /> <span>Due Management</span>{" "}
                                     </Link>
                                 </li>
                             </ul>

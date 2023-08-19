@@ -5,6 +5,7 @@ import recentestimates from '../json/recentestimates';
 import ApexCharts from 'apexcharts';
 // import Header from '../layouts/Header'
 import Header from './CustomHeader'
+import FeatherIcon from 'feather-icons-react';
 import Sidebar from './SidebarCustom'
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 
@@ -130,7 +131,26 @@ const Dashboard = () => {
 
 				<div className="page-wrapper">
 					<div className="content container-fluid">
+						<div className='d-flex gap-2 mb-3 py-3 from-group align-items-center justify-content-between'>
+							<div className='d-flex form-group gap-3'>
+								<div>
+									<label className="">Entry Date</label>
+									<input type="date" className="form-control" />
+								</div>
+								<div>
+									<label className="">To-date</label>
+									<input type="date" className="form-control" />
+								</div>
+							</div>
+							<div className='d-flex gap-2'>
+								<button type="button" className="btn btn-block w-100 btn-outline-primary">
+									<FeatherIcon icon="printer" />
+									<span className='ms-2'>Print</span>
+								</button>
+								<button type="button" class="btn btn-primary">Cash Report</button>
 
+							</div>
+						</div>
 						<div className="row">
 							<div className="col-xl-3 col-sm-6 col-12">
 								<div className="card">
@@ -140,9 +160,9 @@ const Dashboard = () => {
 												<i className="fas fa-dollar-sign"></i>
 											</span>
 											<div className="dash-count">
-												<div className="dash-title">Amount Due to inded bro</div>
+												<div className="dash-title">Net Total</div>
 												<div className="dash-counts">
-													<p>1,642</p>
+													<p>1,64200</p>
 												</div>
 											</div>
 										</div>
@@ -161,7 +181,7 @@ const Dashboard = () => {
 												<i className="fas fa-users"></i>
 											</span>
 											<div className="dash-count">
-												<div className="dash-title">Customers</div>
+												<div className="dash-title">Advanced</div>
 												<div className="dash-counts">
 													<p>3,642</p>
 												</div>
@@ -182,7 +202,7 @@ const Dashboard = () => {
 												<i className="fas fa-file-alt"></i>
 											</span>
 											<div className="dash-count">
-												<div className="dash-title">Invoices</div>
+												<div className="dash-title">Old Gold Pr.</div>
 												<div className="dash-counts">
 													<p>1,041</p>
 												</div>
@@ -203,7 +223,7 @@ const Dashboard = () => {
 												<i className="far fa-file"></i>
 											</span>
 											<div className="dash-count">
-												<div className="dash-title">Estimates</div>
+												<div className="dash-title">Any Dues Paid</div>
 												<div className="dash-counts">
 													<p>2,150</p>
 												</div>

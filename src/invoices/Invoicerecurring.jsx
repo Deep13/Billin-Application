@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../layouts/Header";
-import Sidebar from "../layouts/Sidebar";
+import Sidebar from "../Project/SidebarCustom";
 import FeatherIcon from "feather-icons-react";
 import Data from "../assets/jsons/invoiceRecurring";
 import "../_components/antd.css";

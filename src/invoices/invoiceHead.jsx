@@ -10,8 +10,8 @@ import {
   Rotate,
 } from "../_components/imagepath";
 
-const InvoiceHead = ({show,setShow}) => {
-  
+const InvoiceHead = ({ show, setShow }) => {
+
   return (
     <>
       <div className="page-header">
@@ -21,7 +21,8 @@ const InvoiceHead = ({show,setShow}) => {
             <ul className="filter-list">
               <li>
                 <Link className="btn btn-filters w-auto popup-toggle"
-                onClick={() => setShow(!show)}
+                  to="#"
+                  onClick={() => setShow(!show)}
                 >
                   <span className="me-2">
                     {/* <i className="fe fe-filter" /> */}
@@ -31,31 +32,32 @@ const InvoiceHead = ({show,setShow}) => {
                 </Link>
               </li>
               <li>
-                <Link className="btn-filters" to="#">
+                {/* <Link className="btn-filters" to="#">
                   <span>
-                    {/* <i className="fe fe-settings" /> */}
+                    <i className="fe fe-settings" />
                     <FeatherIcon icon="settings" />
                   </span>{" "}
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link className="btn-filters" to="#">
+                {/* <Link className="btn-filters" to="#">
                   <span>
-                    {/* <i className="fe fe-grid" /> */}
+                    <i className="fe fe-grid" />
                     <FeatherIcon icon="grid" />
                   </span>{" "}
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link className="active btn-filters" to="#">
+                {/* <Link className="active btn-filters" to="#">
                   <span>
-                    {/* <i className="fe fe-list" /> */}
+                    <i className="fe fe-list" />
                     <FeatherIcon icon="list" />
                   </span>{" "}
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link className="btn btn-primary" to="/add-invoice">
+                {/* <Link className="btn btn-primary" to="/add-invoice"> */}
+                <Link className="btn btn-primary" to="/invoice_generation">
                   <i className="fa fa-plus-circle me-2" aria-hidden="true" />
                   New Invoice
                 </Link>
